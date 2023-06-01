@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/BpmnForCpsExtension/src" modelPluginID="BpmnForCpsExtension"
+    modelName="MyModel" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    usedGenPackages="../../org.eclipse.bpmn2/model/BPMN20.genmodel#//bpmn2 ../../org.eclipse.bpmn2/model/BPMN20.genmodel#//di ../../org.eclipse.bpmn2/model/BPMN20.genmodel#//di.1 ../../org.eclipse.bpmn2/model/BPMN20.genmodel#//dc"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>MyModel.ecore</foreignModel>
+  <genPackages prefix="MyModel" basePackage="bpmnforcpsextension" resource="XML" disposableProviderFactory="true"
+      ecorePackage="MyModel.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="MyModel.ecore#//Physical_Properties">
+      <genEnumLiterals ecoreEnumLiteral="MyModel.ecore#//Physical_Properties/Vitesse"/>
+      <genEnumLiterals ecoreEnumLiteral="MyModel.ecore#//Physical_Properties/Force"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="MyModel.ecore#//TypeDevice">
+      <genEnumLiterals ecoreEnumLiteral="MyModel.ecore#//TypeDevice/Sensor_Role"/>
+      <genEnumLiterals ecoreEnumLiteral="MyModel.ecore#//TypeDevice/Actuator_Role"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="MyModel.ecore#//Timer_Type">
+      <genEnumLiterals ecoreEnumLiteral="MyModel.ecore#//Timer_Type/Time_Data"/>
+      <genEnumLiterals ecoreEnumLiteral="MyModel.ecore#//Timer_Type/Interval"/>
+      <genEnumLiterals ecoreEnumLiteral="MyModel.ecore#//Timer_Type/Duration"/>
+    </genEnums>
+    <genClasses ecoreClass="MyModel.ecore#//DocumentRoot">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyModel.ecore#//DocumentRoot/taskConfig"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyModel.ecore#//DocumentRoot/temporalDependency"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyModel.ecore#//DocumentRoot/metaData"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//DocumentRoot/msa"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//DocumentRoot/moa"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//DocumentRoot/mfa"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//DocumentRoot/msi"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//DocumentRoot/moi"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//DocumentRoot/mfi"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//DocumentRoot/musthappenataninfinitetime"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//DocumentRoot/musthappenaslongastheactivityisexecuting"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//DocumentRoot/musthappenatthestartoftheactivity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//DocumentRoot/musthappenattheendoftheactivity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//DocumentRoot/musthappenataboundtime"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//DocumentRoot/mustneverhappenataninfinitetime"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//DocumentRoot/mustneverhappenatthestartoftheactivity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//DocumentRoot/mustneverhappenattheendoftheactivity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//DocumentRoot/mustneverhappenataboundtime"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//DocumentRoot/myeventdefinition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//DocumentRoot/duration"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//DocumentRoot/periodicevent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//DocumentRoot/sporadicevent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//DocumentRoot/physicalentitytask"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//DocumentRoot/realworldproperties"/>
+    </genClasses>
+    <genClasses ecoreClass="MyModel.ecore#//Parameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//Parameter/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//Parameter/value"/>
+    </genClasses>
+    <genClasses ecoreClass="MyModel.ecore#//MetaData">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute MyModel.ecore#//MetaData/mixed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MetaData/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MetaData/value"/>
+    </genClasses>
+    <genClasses ecoreClass="MyModel.ecore#//TaskConfig">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyModel.ecore#//TaskConfig/parameters"/>
+    </genClasses>
+    <genClasses ecoreClass="MyModel.ecore#//TemporalDependency">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//TemporalDependency/sourceRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//TemporalDependency/targetRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//TemporalDependency/Max_value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//TemporalDependency/Min_value"/>
+    </genClasses>
+    <genClasses ecoreClass="MyModel.ecore#//MSA">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MSA/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MSA/Type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//MSA/Target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MSA/value"/>
+    </genClasses>
+    <genClasses ecoreClass="MyModel.ecore#//MOA">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MOA/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MOA/Type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//MOA/Target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MOA/value"/>
+    </genClasses>
+    <genClasses ecoreClass="MyModel.ecore#//MFA">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MFA/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MFA/Type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//MFA/Target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MFA/value"/>
+    </genClasses>
+    <genClasses ecoreClass="MyModel.ecore#//MSI">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MSI/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MSI/Type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//MSI/Target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MSI/Min_Value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MSI/Max_Value"/>
+    </genClasses>
+    <genClasses ecoreClass="MyModel.ecore#//MOI">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MOI/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MOI/Type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//MOI/Target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MOI/Min_Value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MOI/Max_Value"/>
+    </genClasses>
+    <genClasses ecoreClass="MyModel.ecore#//MFI">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MFI/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MFI/Type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//MFI/Target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MFI/Min_Value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MFI/Max_Value"/>
+    </genClasses>
+    <genClasses ecoreClass="MyModel.ecore#//MustHappenAtAnInfiniteTime">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtAnInfiniteTime/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtAnInfiniteTime/Type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//MustHappenAtAnInfiniteTime/Target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtAnInfiniteTime/Do_Happen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtAnInfiniteTime/First_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtAnInfiniteTime/Min_value_of_the_first_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtAnInfiniteTime/Max_value_of_the_first_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtAnInfiniteTime/Second_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtAnInfiniteTime/Min_value_of_the_second_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtAnInfiniteTime/Max_value_of_the_second_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtAnInfiniteTime/Third_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtAnInfiniteTime/Min_value_of_the_third_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtAnInfiniteTime/Max_value_of_the_third_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtAnInfiniteTime/Physical_dependency_function"/>
+    </genClasses>
+    <genClasses ecoreClass="MyModel.ecore#//MustHappenAsLongAsTheActivityIsExecuting">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAsLongAsTheActivityIsExecuting/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAsLongAsTheActivityIsExecuting/Type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//MustHappenAsLongAsTheActivityIsExecuting/Target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAsLongAsTheActivityIsExecuting/Do_Happen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAsLongAsTheActivityIsExecuting/First_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAsLongAsTheActivityIsExecuting/Min_value_of_the_first_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAsLongAsTheActivityIsExecuting/Max_value_of_the_first_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAsLongAsTheActivityIsExecuting/Second_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAsLongAsTheActivityIsExecuting/Min_value_of_the_second_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAsLongAsTheActivityIsExecuting/Max_value_of_the_second_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAsLongAsTheActivityIsExecuting/Third_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAsLongAsTheActivityIsExecuting/Min_value_of_the_third_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAsLongAsTheActivityIsExecuting/Max_value_of_the_third_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAsLongAsTheActivityIsExecuting/Physical_dependency_function"/>
+    </genClasses>
+    <genClasses ecoreClass="MyModel.ecore#//MustHappenAtTheStartOfTheActivity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtTheStartOfTheActivity/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtTheStartOfTheActivity/Type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//MustHappenAtTheStartOfTheActivity/Target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtTheStartOfTheActivity/Do_Happen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtTheStartOfTheActivity/First_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtTheStartOfTheActivity/Min_value_of_the_first_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtTheStartOfTheActivity/Max_value_of_the_first_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtTheStartOfTheActivity/Second_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtTheStartOfTheActivity/Min_value_of_the_second_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtTheStartOfTheActivity/Max_value_of_the_second_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtTheStartOfTheActivity/Third_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtTheStartOfTheActivity/Min_value_of_the_third_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtTheStartOfTheActivity/Max_value_of_the_third_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtTheStartOfTheActivity/Physical_dependency_function"/>
+    </genClasses>
+    <genClasses ecoreClass="MyModel.ecore#//MustHappenAtTheEndOfTheActivity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtTheEndOfTheActivity/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtTheEndOfTheActivity/Type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//MustHappenAtTheEndOfTheActivity/Target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtTheEndOfTheActivity/Do_Happen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtTheEndOfTheActivity/First_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtTheEndOfTheActivity/Min_value_of_the_first_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtTheEndOfTheActivity/Max_value_of_the_first_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtTheEndOfTheActivity/Second_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtTheEndOfTheActivity/Min_value_of_the_second_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtTheEndOfTheActivity/Max_value_of_the_second_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtTheEndOfTheActivity/Third_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtTheEndOfTheActivity/Min_value_of_the_third_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtTheEndOfTheActivity/Max_value_of_the_third_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtTheEndOfTheActivity/Physical_dependency_function"/>
+    </genClasses>
+    <genClasses ecoreClass="MyModel.ecore#//MustHappenAtABoundTime">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtABoundTime/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtABoundTime/Type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//MustHappenAtABoundTime/Target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtABoundTime/Do_Happen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtABoundTime/Min_bound_time"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtABoundTime/Max_bound_time"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtABoundTime/First_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtABoundTime/Min_value_of_the_first_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtABoundTime/Max_value_of_the_first_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtABoundTime/Second_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtABoundTime/Min_value_of_the_second_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtABoundTime/Max_value_of_the_second_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtABoundTime/Third_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtABoundTime/Min_value_of_the_third_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtABoundTime/Max_value_of_the_third_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustHappenAtABoundTime/Physical_dependency_function"/>
+    </genClasses>
+    <genClasses ecoreClass="MyModel.ecore#//MustNeverHappenAtAnInfiniteTime">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtAnInfiniteTime/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtAnInfiniteTime/Type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//MustNeverHappenAtAnInfiniteTime/Target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtAnInfiniteTime/Do_Happen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtAnInfiniteTime/First_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtAnInfiniteTime/Min_value_of_the_first_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtAnInfiniteTime/Max_value_of_the_first_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtAnInfiniteTime/Second_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtAnInfiniteTime/Min_value_of_the_second_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtAnInfiniteTime/Max_value_of_the_second_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtAnInfiniteTime/Third_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtAnInfiniteTime/Min_value_of_the_third_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtAnInfiniteTime/Max_value_of_the_third_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtAnInfiniteTime/Physical_dependency_function"/>
+    </genClasses>
+    <genClasses ecoreClass="MyModel.ecore#//MustNeverHappenAsLongAsTheActivityIsExecuting">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAsLongAsTheActivityIsExecuting/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAsLongAsTheActivityIsExecuting/Type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//MustNeverHappenAsLongAsTheActivityIsExecuting/Target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAsLongAsTheActivityIsExecuting/Do_Happen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAsLongAsTheActivityIsExecuting/First_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAsLongAsTheActivityIsExecuting/Min_value_of_the_first_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAsLongAsTheActivityIsExecuting/Max_value_of_the_first_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAsLongAsTheActivityIsExecuting/Second_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAsLongAsTheActivityIsExecuting/Min_value_of_the_second_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAsLongAsTheActivityIsExecuting/Max_value_of_the_second_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAsLongAsTheActivityIsExecuting/Third_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAsLongAsTheActivityIsExecuting/Min_value_of_the_third_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAsLongAsTheActivityIsExecuting/Max_value_of_the_third_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAsLongAsTheActivityIsExecuting/Physical_dependency_function"/>
+    </genClasses>
+    <genClasses ecoreClass="MyModel.ecore#//MustNeverHappenAtTheStartOfTheActivity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtTheStartOfTheActivity/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtTheStartOfTheActivity/Type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//MustNeverHappenAtTheStartOfTheActivity/Target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtTheStartOfTheActivity/Do_Happen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtTheStartOfTheActivity/First_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtTheStartOfTheActivity/Min_value_of_the_first_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtTheStartOfTheActivity/Max_value_of_the_first_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtTheStartOfTheActivity/Second_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtTheStartOfTheActivity/Min_value_of_the_second_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtTheStartOfTheActivity/Max_value_of_the_second_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtTheStartOfTheActivity/Third_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtTheStartOfTheActivity/Min_value_of_the_third_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtTheStartOfTheActivity/Max_value_of_the_third_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtTheStartOfTheActivity/Physical_dependency_function"/>
+    </genClasses>
+    <genClasses ecoreClass="MyModel.ecore#//MustNeverHappenAtTheEndOfTheActivity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtTheEndOfTheActivity/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtTheEndOfTheActivity/Type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//MustNeverHappenAtTheEndOfTheActivity/Target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtTheEndOfTheActivity/Do_Happen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtTheEndOfTheActivity/First_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtTheEndOfTheActivity/Min_value_of_the_first_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtTheEndOfTheActivity/Max_value_of_the_first_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtTheEndOfTheActivity/Second_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtTheEndOfTheActivity/Min_value_of_the_second_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtTheEndOfTheActivity/Max_value_of_the_second_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtTheEndOfTheActivity/Third_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtTheEndOfTheActivity/Min_value_of_the_third_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtTheEndOfTheActivity/Max_value_of_the_third_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtTheEndOfTheActivity/Physical_dependency_function"/>
+    </genClasses>
+    <genClasses ecoreClass="MyModel.ecore#//MustNeverHappenAtABoundTime">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtABoundTime/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtABoundTime/Type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//MustNeverHappenAtABoundTime/Target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtABoundTime/Do_Happen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtABoundTime/Min_bound_time"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtABoundTime/Max_bound_time"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtABoundTime/First_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtABoundTime/Min_value_of_the_first_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtABoundTime/Max_value_of_the_first_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtABoundTime/Second_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtABoundTime/Min_value_of_the_second_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtABoundTime/Max_value_of_the_second_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtABoundTime/Third_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtABoundTime/Min_value_of_the_third_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtABoundTime/Max_value_of_the_third_physical_property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MustNeverHappenAtABoundTime/Physical_dependency_function"/>
+    </genClasses>
+    <genClasses ecoreClass="MyModel.ecore#//PeriodicEvent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//PeriodicEvent/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//PeriodicEvent/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//PeriodicEvent/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//PeriodicEvent/type"/>
+    </genClasses>
+    <genClasses ecoreClass="MyModel.ecore#//SporadicEvent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//SporadicEvent/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//SporadicEvent/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//SporadicEvent/Min_time"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//SporadicEvent/Max_time"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//SporadicEvent/type"/>
+    </genClasses>
+    <genClasses ecoreClass="MyModel.ecore#//PeriodicActivity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//PeriodicActivity/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//PeriodicActivity/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//PeriodicActivity/Time_value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//PeriodicActivity/Timer_Type"/>
+    </genClasses>
+    <genClasses ecoreClass="MyModel.ecore#//SporadicActivity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//SporadicActivity/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//SporadicActivity/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//SporadicActivity/Max_time"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//SporadicActivity/Min_time"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//SporadicActivity/Timer_Type"/>
+    </genClasses>
+    <genClasses ecoreClass="MyModel.ecore#//Duration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//Duration/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyModel.ecore#//Duration/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//Duration/Min_time_duration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//Duration/Max_time_duration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//Duration/Time_Type"/>
+    </genClasses>
+    <genClasses ecoreClass="MyModel.ecore#//PhysicalEntityTask">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//PhysicalEntityTask/CPSPerformerRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//PhysicalEntityTask/CPSDeviceRoleParameters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//PhysicalEntityTask/Type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//PhysicalEntityTask/isMovable"/>
+    </genClasses>
+    <genClasses ecoreClass="MyModel.ecore#//MyEventDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//MyEventDefinition/value"/>
+    </genClasses>
+    <genClasses ecoreClass="MyModel.ecore#//RealWorldProperties">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyModel.ecore#//RealWorldProperties/Parameters"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

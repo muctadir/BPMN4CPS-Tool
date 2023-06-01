@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="MyModel" nsURI="http://org.eclipse.BpmnForCpsExtension" nsPrefix="mm">
+  <eClassifiers xsi:type="ecore:EClass" name="DocumentRoot">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value=""/>
+      <details key="kind" value="mixed"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="taskConfig" upperBound="-2"
+        eType="#//TaskConfig" containment="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="taskConfig"/>
+        <details key="kind" value="element"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="temporalDependency" upperBound="-2"
+        eType="#//TemporalDependency" containment="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="temporalDependency"/>
+        <details key="kind" value="element"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="metaData" upperBound="-2"
+        eType="#//MetaData" containment="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="metaData"/>
+        <details key="kind" value="element"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="msa" upperBound="-2" eType="#//MSA">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="msa"/>
+        <details key="kind" value="element"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="moa" upperBound="-2" eType="#//MOA">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="moa"/>
+        <details key="kind" value="element"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mfa" upperBound="-2" eType="#//MFA">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="mfa"/>
+        <details key="kind" value="element"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="msi" upperBound="-2" eType="#//MSI">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="msi"/>
+        <details key="kind" value="element"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="moi" upperBound="-2" eType="#//MOI">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="moi"/>
+        <details key="kind" value="element"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mfi" upperBound="-2" eType="#//MFI">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="mfi"/>
+        <details key="kind" value="element"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="musthappenataninfinitetime"
+        upperBound="-2" eType="#//MustHappenAtAnInfiniteTime">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="musthappenataninfinitetime"/>
+        <details key="kind" value="element"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="musthappenaslongastheactivityisexecuting"
+        upperBound="-2" eType="#//MustHappenAsLongAsTheActivityIsExecuting">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="musthappenaslongastheactivityisexecuting"/>
+        <details key="kind" value="element"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="musthappenatthestartoftheactivity"
+        upperBound="-2" eType="#//MustHappenAtTheStartOfTheActivity">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="musthappenatthestartoftheactivity"/>
+        <details key="kind" value="element"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="musthappenattheendoftheactivity"
+        upperBound="-2" eType="#//MustHappenAtTheEndOfTheActivity">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="musthappenattheendoftheactivity"/>
+        <details key="kind" value="element"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="musthappenataboundtime"
+        upperBound="-2" eType="#//MustHappenAtABoundTime">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="musthappenataboundtime"/>
+        <details key="kind" value="element"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mustneverhappenataninfinitetime"
+        upperBound="-2" eType="#//MustNeverHappenAtAnInfiniteTime">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="mustneverhappenataninfinitetime"/>
+        <details key="kind" value="element"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mustneverhappenatthestartoftheactivity"
+        upperBound="-2" eType="#//MustNeverHappenAtTheStartOfTheActivity">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="mustneverhappenatthestartoftheactivity"/>
+        <details key="kind" value="element"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mustneverhappenattheendoftheactivity"
+        upperBound="-2" eType="#//MustNeverHappenAtTheEndOfTheActivity">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="mustneverhappenattheendoftheactivity"/>
+        <details key="kind" value="element"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mustneverhappenataboundtime"
+        upperBound="-2" eType="#//MustNeverHappenAtABoundTime">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="mustneverhappenataboundtime"/>
+        <details key="kind" value="element"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="myeventdefinition" upperBound="-2"
+        eType="#//MyEventDefinition">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="myeventdefinition"/>
+        <details key="kind" value="element"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="duration" upperBound="-2"
+        eType="#//Duration">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="duration"/>
+        <details key="kind" value="element"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="periodicevent" upperBound="-2"
+        eType="#//PeriodicEvent">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="periodicevent"/>
+        <details key="kind" value="element"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sporadicevent" upperBound="-2"
+        eType="#//SporadicEvent">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="sporadicevent"/>
+        <details key="kind" value="element"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="physicalentitytask" upperBound="-2"
+        eType="#//PhysicalEntityTask">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="physicalentitytask"/>
+        <details key="kind" value="element"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="realworldproperties" upperBound="-2"
+        eType="#//RealWorldProperties">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="realworldproperties"/>
+        <details key="kind" value="element"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Parameter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MetaData">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="kind" value="mixed"/>
+      <details key="namespace" value="##targetNamespace"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mixed" unique="false" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFeatureMapEntry">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="elementWildcard"/>
+        <details key="name" value=":mixed"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" volatile="true"
+        transient="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskConfig">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+        eType="#//Parameter" containment="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="parameter"/>
+        <details key="kind" value="element"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TemporalDependency" eSuperTypes="../../org.eclipse.bpmn2/model/BPMN20.ecore#//FlowElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceRef" eType="ecore:EClass ../../org.eclipse.bpmn2/model/BPMN20.ecore#//BoundaryEvent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetRef" eType="ecore:EClass ../../org.eclipse.bpmn2/model/BPMN20.ecore#//BoundaryEvent"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MSA" eSuperTypes="../../org.eclipse.bpmn2/model/BPMN20.ecore#//EventDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="MSA"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Target" eType="ecore:EClass ../../org.eclipse.bpmn2/model/BPMN20.ecore#//Activity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MOA" eSuperTypes="../../org.eclipse.bpmn2/model/BPMN20.ecore#//EventDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="MOA"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Target" eType="ecore:EClass ../../org.eclipse.bpmn2/model/BPMN20.ecore#//Activity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MFA" eSuperTypes="../../org.eclipse.bpmn2/model/BPMN20.ecore#//EventDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="MFA"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Target" eType="ecore:EClass ../../org.eclipse.bpmn2/model/BPMN20.ecore#//Activity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MSI" eSuperTypes="../../org.eclipse.bpmn2/model/BPMN20.ecore#//EventDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="MSI"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Target" eType="ecore:EClass ../../org.eclipse.bpmn2/model/BPMN20.ecore#//Activity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_Value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_Value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MOI" eSuperTypes="../../org.eclipse.bpmn2/model/BPMN20.ecore#//EventDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="MOI"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Target" eType="ecore:EClass ../../org.eclipse.bpmn2/model/BPMN20.ecore#//Activity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_Value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_Value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MFI" eSuperTypes="../../org.eclipse.bpmn2/model/BPMN20.ecore#//EventDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="MFI"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Target" eType="ecore:EClass ../../org.eclipse.bpmn2/model/BPMN20.ecore#//Activity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_Value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_Value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MustHappenAtAnInfiniteTime" eSuperTypes="../../org.eclipse.bpmn2/model/BPMN20.ecore#//EventDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="MHIT"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Target" eType="ecore:EClass ../../org.eclipse.bpmn2/model/BPMN20.ecore#//Activity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Do_Happen" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="True"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="First_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Please do not insert a  gap "/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_value_of_the_first_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_value_of_the_first_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Second_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Please do not insert a  gap "/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_value_of_the_second_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_value_of_the_second_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Third_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Please do not insert a  gap "/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_value_of_the_third_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_value_of_the_third_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Physical_dependency_function"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Other variables that can be used : Duration, StartTime, FinishTime. Please enter a C function!"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MustHappenAsLongAsTheActivityIsExecuting"
+      eSuperTypes="../../org.eclipse.bpmn2/model/BPMN20.ecore#//EventDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="MHDA"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Target" eType="ecore:EClass ../../org.eclipse.bpmn2/model/BPMN20.ecore#//Activity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Do_Happen" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="True"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="First_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Please do not insert a  gap "/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_value_of_the_first_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_value_of_the_first_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Second_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Please do not insert a  gap "/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_value_of_the_second_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_value_of_the_second_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Third_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Please do not insert a  gap "/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_value_of_the_third_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_value_of_the_third_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Physical_dependency_function"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Other variables that can be used : Duration, StartTime, FinishTime. Please enter a C function!"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MustHappenAtTheStartOfTheActivity" eSuperTypes="../../org.eclipse.bpmn2/model/BPMN20.ecore#//EventDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="MHST"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Target" eType="ecore:EClass ../../org.eclipse.bpmn2/model/BPMN20.ecore#//Activity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Do_Happen" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="True"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="First_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Please do not insert a  gap "/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_value_of_the_first_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_value_of_the_first_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Second_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Please do not insert a  gap "/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_value_of_the_second_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_value_of_the_second_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Third_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Please do not insert a  gap "/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_value_of_the_third_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_value_of_the_third_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Physical_dependency_function"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Other variables that can be used : Duration, StartTime, FinishTime. Please enter a C function!"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MustHappenAtTheEndOfTheActivity" eSuperTypes="../../org.eclipse.bpmn2/model/BPMN20.ecore#//EventDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="MHFT"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Target" eType="ecore:EClass ../../org.eclipse.bpmn2/model/BPMN20.ecore#//Activity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Do_Happen" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="True"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="First_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Please do not insert a  gap "/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_value_of_the_first_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_value_of_the_first_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Second_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Please do not insert a  gap "/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_value_of_the_second_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_value_of_the_second_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Third_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Please do not insert a  gap "/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_value_of_the_third_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_value_of_the_third_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Physical_dependency_function"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Other variables that can be used : Duration, StartTime, FinishTime. Please enter a C function!"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MustHappenAtABoundTime" eSuperTypes="../../org.eclipse.bpmn2/model/BPMN20.ecore#//EventDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="MHBT"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Target" eType="ecore:EClass ../../org.eclipse.bpmn2/model/BPMN20.ecore#//Activity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Do_Happen" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="True"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_bound_time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_bound_time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="First_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Please do not insert a  gap "/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_value_of_the_first_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_value_of_the_first_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Second_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Please do not insert a  gap "/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_value_of_the_second_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_value_of_the_second_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Third_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Please do not insert a  gap "/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_value_of_the_third_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_value_of_the_third_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Physical_dependency_function"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Other variables that can be used : Duration, StartTime, FinishTime. Please enter a C function!"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MustNeverHappenAtAnInfiniteTime" eSuperTypes="../../org.eclipse.bpmn2/model/BPMN20.ecore#//EventDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="MHIT"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Target" eType="ecore:EClass ../../org.eclipse.bpmn2/model/BPMN20.ecore#//Activity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Do_Happen" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="First_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Please do not insert a  gap "/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_value_of_the_first_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_value_of_the_first_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Second_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Please do not insert a  gap "/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_value_of_the_second_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_value_of_the_second_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Third_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Please do not insert a  gap "/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_value_of_the_third_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_value_of_the_third_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Physical_dependency_function"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Other variables that can be used : Duration, StartTime, FinishTime. Please enter a C function!"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MustNeverHappenAsLongAsTheActivityIsExecuting"
+      eSuperTypes="../../org.eclipse.bpmn2/model/BPMN20.ecore#//EventDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="MNHALATAIE"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Target" eType="ecore:EClass ../../org.eclipse.bpmn2/model/BPMN20.ecore#//Activity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Do_Happen" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="First_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Please do not insert a  gap "/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_value_of_the_first_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_value_of_the_first_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Second_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Please do not insert a  gap "/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_value_of_the_second_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_value_of_the_second_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Third_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Please do not insert a  gap "/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_value_of_the_third_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_value_of_the_third_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Physical_dependency_function"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Other variables that can be used : Duration, StartTime, FinishTime. Please enter a C function!"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MustNeverHappenAtTheStartOfTheActivity"
+      eSuperTypes="../../org.eclipse.bpmn2/model/BPMN20.ecore#//EventDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="MNHST"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Target" eType="ecore:EClass ../../org.eclipse.bpmn2/model/BPMN20.ecore#//Activity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Do_Happen" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="False"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="First_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Please do not insert a  gap "/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_value_of_the_first_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_value_of_the_first_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Second_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Please do not insert a  gap "/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_value_of_the_second_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_value_of_the_second_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Third_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Please do not insert a  gap "/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_value_of_the_third_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_value_of_the_third_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Physical_dependency_function"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Other variables that can be used : Duration, StartTime, FinishTime. Please enter a C function!"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MustNeverHappenAtTheEndOfTheActivity"
+      eSuperTypes="../../org.eclipse.bpmn2/model/BPMN20.ecore#//EventDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="MNHFT"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Target" eType="ecore:EClass ../../org.eclipse.bpmn2/model/BPMN20.ecore#//Activity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Do_Happen" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="False"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="First_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Please do not insert a  gap "/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_value_of_the_first_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_value_of_the_first_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Second_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Please do not insert a  gap "/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_value_of_the_second_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_value_of_the_second_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Third_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Please do not insert a  gap "/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_value_of_the_third_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_value_of_the_third_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Physical_dependency_function"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Other variables that can be used : Duration, StartTime, FinishTime. Please enter a C function!"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MustNeverHappenAtABoundTime" eSuperTypes="../../org.eclipse.bpmn2/model/BPMN20.ecore#//EventDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="MNHBT"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Target" eType="ecore:EClass ../../org.eclipse.bpmn2/model/BPMN20.ecore#//Activity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Do_Happen" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="False"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_bound_time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_bound_time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="First_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Please do not insert a  gap "/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_value_of_the_first_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_value_of_the_first_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Second_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Please do not insert a  gap "/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_value_of_the_second_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_value_of_the_second_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Third_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Please do not insert a  gap "/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_value_of_the_third_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_value_of_the_third_physical_property"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Physical_dependency_function"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="Other variables that can be used : Duration, StartTime, FinishTime. Please enter a C function!"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PeriodicEvent" eSuperTypes="../../org.eclipse.bpmn2/model/BPMN20.ecore#//EventDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass ../../org.eclipse.bpmn2/model/BPMN20.ecore#//Task"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="EventPeriodic"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SporadicEvent" eSuperTypes="../../org.eclipse.bpmn2/model/BPMN20.ecore#//EventDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass ../../org.eclipse.bpmn2/model/BPMN20.ecore#//Task"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="EventSporadic"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PeriodicActivity" eSuperTypes="../../org.eclipse.bpmn2/model/BPMN20.ecore#//EventDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass ../../org.eclipse.bpmn2/model/BPMN20.ecore#//StandardLoopCharacteristics"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Time_value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Timer_Type" eType="#//Timer_Type"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SporadicActivity" eSuperTypes="../../org.eclipse.bpmn2/model/BPMN20.ecore#//EventDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass ../../org.eclipse.bpmn2/model/BPMN20.ecore#//StandardLoopCharacteristics"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Timer_Type" eType="#//Timer_Type"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Duration" eSuperTypes="../../org.eclipse.bpmn2/model/BPMN20.ecore#//EventDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass ../../org.eclipse.bpmn2/model/BPMN20.ecore#//Activity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Min_time_duration" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Max_time_duration" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Time_Type" eType="#//Timer_Type"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PhysicalEntityTask" eSuperTypes="../../org.eclipse.bpmn2/model/BPMN20.ecore#//Task">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CPSPerformerRef" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CPSDeviceRoleParameters"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="#//TypeDevice"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isMovable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Physical_Properties">
+    <eLiterals name="Vitesse"/>
+    <eLiterals name="Force"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TypeDevice">
+    <eLiterals name="Sensor_Role"/>
+    <eLiterals name="Actuator_Role"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Timer_Type">
+    <eLiterals name="Time_Data" literal="Time_Data"/>
+    <eLiterals name="Interval"/>
+    <eLiterals name="Duration"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MyEventDefinition" eSuperTypes="../../org.eclipse.bpmn2/model/BPMN20.ecore#//EventDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RealWorldProperties" eSuperTypes="../../org.eclipse.bpmn2/model/BPMN20.ecore#//TextAnnotation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Parameters" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,1349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated MyModel -->
+      <package
+            uri="http://org.eclipse.BpmnForCpsExtension"
+            class="bpmnforcpsextension.MyModel.MyModelPackage"
+            genModel="model/MyModel.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated MyModel -->
+      <parser
+            type="mymodel"
+            class="bpmnforcpsextension.MyModel.util.MyModelResourceFactoryImpl"/>
+   </extension>
+    <extension point="org.eclipse.bpmn2.modeler.runtime">
+      <runtime
+            class="bpmnforcpsextension.MyRuntimeExtension"
+            description="BpmnForCps-Extension"
+            id="BpmnForCps.runtime1"
+            name="BpmnForCps-Extension">
+      </runtime>
+      <model
+            resourceFactory="bpmnforcpsextension.MyModel.util.MyModelResourceFactoryImpl"
+            runtimeId="BpmnForCps.runtime1"
+            uri="http://org.eclipse.BpmnForCpsEtension">
+      </model>
+       <modelEnablement
+      id="modelEnablement"
+              profile="org.eclipse.bpmn2.modeler.examples.customtask.modelEnablement1">
+            
+            <enable object="all"/>
+            <enable
+                  object="CyberTask">
+            </enable>
+             <enable
+                  object="CyberTask"
+                  feature="implementation">
+            </enable>
+            <enable
+                  object="EmbeddedServiceTask">
+            </enable>
+            <enable
+                  object="CloudServiceTask">
+            </enable>
+            <enable
+                  object="WebService">
+            </enable>
+            <enable
+                  object="PhysicalTask">
+            </enable>
+            <enable
+                  object="ActuatorTask">
+            </enable>
+            <enable
+                  object="SensorTask">
+            </enable>
+            <enable
+                  object="ManualTask">
+            </enable>
+            <enable
+                  object="RWEParticipant">
+            </enable>
+         <enable
+                  object="CyberParticipant">
+            </enable>
+        <!-- <enable
+                  object="MyBoundaryEvent">
+            </enable>-->
+           		
+            <enable
+                  object="MSA">
+            </enable>
+            <enable
+                  object="MOA">
+            </enable>
+            <enable
+                  object="MFA">
+            </enable>
+            <enable
+                  object="MSI">
+            </enable>
+            <enable
+                  object="MOI">
+            </enable>
+            <enable
+                  object="MFI">
+            </enable>
+            <enable
+                  object="MustHappenAtAnInfiniteTime">
+            </enable>
+             <enable
+         		object="MustHappenAsLongAsTheActivityIsExecuting">
+   			</enable>
+             <enable
+                   object="MustHappenAtTheStartOfTheActivity">
+             </enable>
+             <enable
+                   object="MustHappenAtTheEndOfTheActivity">
+             </enable>
+   			<enable
+       			  object="MustHappenAtABoundTime">
+   			</enable>
+   			<!--<enable
+       			  object="MustLastForADuration">
+   			</enable>-->
+   			<enable
+                  object="MustNeverHappenAtAnInfiniteTime">
+            </enable>
+             <enable
+         		object="MustNeverHappenAsLongAsTheActivityIsExecuting">
+   			</enable>
+             <enable
+                   object="MustNeverHappenAtTheStartOfTheActivity">
+             </enable>
+             <enable
+                   object="MustNeverHappenAtTheEndOfTheActivity">
+             </enable>
+   			<enable
+       			  object="MustNeverHappenAtABoundTime">
+   			</enable>
+   			<!--<enable
+       			  object="MustNeverHappenDuring">
+   			</enable>-->
+   
+            <enable
+                  object="TemporalDependency">
+            </enable>
+         
+		
+			<enable object="SequenceFlow"/>
+			<enable object="SubProcess"/>
+		
+	<!--	<enable
+          feature="name"
+          object="Duration"/>
+          <enable
+          feature="Time_value"
+          object="Duration"/>
+          <enable
+          feature="target"
+          object="Duration"/>
+          <enable
+          feature="Max_time_duration"
+          object="Duration"/>
+           <enable
+          feature="Min_time_duration"
+          object="Duration"/>
+          <enable
+          feature="name"
+          object="Duration"/>-->
+          <enable   object="Duration"/>
+        <enable
+                object="PhysicalEntity">
+          </enable>
+		
+		<enable object="Task"/>
+  <enable
+        object="SporadicActivity">
+  </enable>
+  <enable
+        object="PeriodicEvent">
+  </enable>
+  <enable
+        feature="name"
+        object="SporadicActivity">
+  </enable>
+  <enable
+        feature="target"
+        object="SporadicActivity">
+  </enable>
+  <enable
+        feature="Max_time"
+        object="SporadicActivity">
+  </enable>
+  <enable
+        feature="Min_time"
+        object="SporadicActivity">
+  </enable>
+  <enable
+        object="SporadicEvent">
+  </enable>
+    <enable
+         object="RWEParamters">
+   </enable>
+   <enable
+         feature="PropertiesOfRWE"
+         object="RWEParamters">
+   </enable>
+   <enable
+         object="ServiceTask">
+   </enable>
+   <enable
+         object="intermediatecatchevent">
+   </enable>
+   <enable
+         object="PeriodicEvent">
+   </enable>
+   <enable
+         object="sporadicevent">
+   </enable>
+			
+			
+			
+      </modelEnablement>
+      <!--********************************Toolpalette**************************-->
+  <toolPalette
+			id="org.bpmn2.modeler.toolpalette.my.full"
+			runtimeId="BpmnForCps.runtime1"
+			profile="Full">
+
+	<category id="org.bpmn2.modeler.toolpalette.default.categories"/>
+			<category
+         fromPalette="org.bpmn2.modeler.toolpalette.full"
+         id="org.jboss.runtime.jbpm5.toolpalette.process.patterns"
+         name="CPS Pattern">
+				<tool
+          id="org.bpmn2.modeler.tool.CPSPattern"
+          name="CPS Pattern">
+       <object
+             id="CyberProcesses.id"
+             type="Participant[$name='Cyber Processes']">
+       </object>
+       <object
+             id="Controller.id"
+             type="Participant[$name='Controller',y=200]">
+       </object>
+        <object
+             id="PhysicalProcesses.id"
+             type="Participant[$name='Physical Processes',y=400]">
+       </object>
+        <object
+             id="RealWordEnvironment.id"
+             type="Participant[$name='Real Word environment ',y=600]">
+       </object>
+ 	</tool>
+    <tool
+            name="Periodic Activity">
+               <object type="IntermediateCatchEvent[$name='Periodic Timer']" id="ab"/>  
+            <object type="SubProcess[$name='Periodic Activity',$loopCharacteristics=$StandardLoopCharacteristics,x=200,width=150,height=80]" id="abc"/>    
+                  <object type="SequenceFlow[source='ab',target='abc']"/>
+    </tool>
+      <tool        
+            name="Sporadic Activity">
+        <object type="IntermediateCatchEvent[$name='Sporadic Timer']" id="ab"/>  
+      <object type="SubProcess[$name='Sporadic Activity',$loopCharacteristics=$StandardLoopCharacteristics,x=200,width=150,height=80]" id="abc"/>        
+    <object type="SequenceFlow[source='ab',target='abc']"/>
+      </tool>
+     </category>
+    <!-- <object type="SubProcess[$name='abc']" id="azerty"/>
+    <object type="SequenceFlow[source='ab',target='abc']"/>-->
+         </toolPalette>
+     
+<!-- ***************************cyber task *************************************************************** -->  
+           <customTask
+                 category="CPS Tasks"
+                 description="this is a Cyber Service Task"
+                 featureContainer="bpmnforcpsextension.CyberTaskFeatureContainer"
+                 icon="cybertask.png"
+                 id="org.eclipse.bpmn2.modeler.examples.customtask.customTask1"
+                 name="Cyber Task"
+                 propertyTabs="org.eclipse.bpmn2.modeler.examples.customtask.propertyTab5"
+                 runtimeId="BpmnForCps.runtime1"
+                 type="Task">
+      <property
+            name="type"
+            value="CyberTask">
+      </property>
+     <property
+            name="Implementation"
+            type="EString">
+      </property>
+      <property
+            name="CPSDeviceRoleRef"
+            type="EString">
+      </property>
+      <property
+            name="OperationRef"
+            type="EString">
+      </property>
+   
+   </customTask>
+   <propertyTab
+         class="org.eclipse.bpmn2.modeler.core.merrimac.clad.DefaultPropertySection"
+         id="org.eclipse.bpmn2.modeler.examples.customtask.propertyTab5"
+         label="Cyber Task"
+         runtimeId="BpmnForCps.runtime1"
+         type="org.eclipse.bpmn2.Task">
+         <!-- class="bpmnforcpsextension.CyberTaskPropertyTab" -->
+   </propertyTab>
+ <!--**************************Embedded Service Task***********************-->
+    <customTask
+         category="CPS Tasks"
+         description="this is an Embedded Service Task"
+         featureContainer="bpmnforcpsextension.EmbeddedServiceTaskFeatureContainer"
+         icon="embeddedservicetask.png"
+         id="org.eclipse.bpmn2.modeler.examples.customtask.customTask2"
+         name="Embedded Service Task"
+         propertyTabs="org.eclipse.bpmn2.modeler.examples.customtask.propertyTab4"
+         runtimeId="BpmnForCps.runtime1"
+         type="Task">
+      <property
+            name="type"
+            value="EmbeddedServiceTask">
+      </property>
+      <property
+            name="Implementation"
+            type="EString">
+      </property>
+      <property
+            name="OperationRef"
+            type="EString">
+      </property>
+      <property
+            name="CPSDeviceRoleRef"
+            type="EString">
+      </property>
+   </customTask>
+   <propertyTab
+         class="org.eclipse.bpmn2.modeler.core.merrimac.clad.DefaultPropertySection"
+         id="org.eclipse.bpmn2.modeler.examples.customtask.propertyTab4"
+         label="Embedded Service Task"
+         runtimeId="BpmnForCps.runtime1"
+         type="org.eclipse.bpmn2.Task">
+   </propertyTab>
+   
+  <!--************************Web Service Task**********************************-->
+  <customTask
+            category="CPS Tasks"
+            description="this is a web service task"
+            featureContainer="bpmnforcpsextension.WebServiceTaskFeatureContainer"
+            icon="webservicetask.png"
+            id="org.eclipse.bpmn2.modeler.examples.customtask.customTask3"
+            name="Web Service Task"
+            propertyTabs="org.eclipse.bpmn2.modeler.examples.customtask.propertyTab2"
+            runtimeId="BpmnForCps.runtime1"
+            type="Task">
+         <property
+               name="type"
+               value="WebService">
+         </property>
+         <property
+               name="Implementation"
+               type="EString">
+         </property>
+         <property
+               name="OperationRef"
+               type="EString">
+         </property>
+         <property
+               name="CPSDeviceRoleRef"
+               type="EString">
+         </property>
+      </customTask>
+   <propertyTab
+         class="org.eclipse.bpmn2.modeler.core.merrimac.clad.DefaultPropertySection"
+         id="org.eclipse.bpmn2.modeler.examples.customtask.propertyTab2"
+         label="Web Service Task"
+         runtimeId="BpmnForCps.runtime1"
+         type="org.eclipse.bpmn2.Task">
+      </propertyTab>
+      
+  <!--*********************************Cloud Service Task***********************-->
+      <customTask
+            category="CPS Tasks"
+            description="this is a cloud service task"
+            featureContainer="bpmnforcpsextension.CloudServiceTaskFeatureContainer"
+            icon="cloudservicetask.png"
+            id="org.eclipse.bpmn2.modeler.examples.customtask.customTask4"
+            name="Cloud Service Task"
+            propertyTabs="org.eclipse.bpmn2.modeler.examples.customtask.propertyTab3"
+            runtimeId="BpmnForCps.runtime1"
+            type="Task">
+         <property
+               name="type"
+               value="CloudServiceTask">
+         </property>
+         <property
+               name="Implementation"
+               type="EString">
+         </property>
+         <property
+               name="OperationRef"
+               type="EString">
+         </property>
+         <property
+               name="MaxCost"
+               type="EString">
+         </property>
+         <property
+               name="CPSDeviceRoleRef"
+               type="EString">
+         </property>
+      </customTask>
+      
+   <!--********************************Physical Task***************************-->
+      <propertyTab
+            class="org.eclipse.bpmn2.modeler.core.merrimac.clad.DefaultPropertySection"
+            id="org.eclipse.bpmn2.modeler.examples.customtask.propertyTab3"
+            label="Cloud Service Task "
+            runtimeId="BpmnForCps.runtime1"
+            type="org.eclipse.bpmn2.Task">
+      </propertyTab>
+     <customTask
+           category="CPS Tasks"
+           description="this is a physical task"
+           featureContainer="bpmnforcpsextension.PhysicalServiceTaskFeatureContainer"
+           icon="physicaltask.png"
+           id="org.eclipse.bpmn2.modeler.examples.customtask.customTask5"
+           name="Physical Task"
+           propertyTabs="org.eclipse.bpmn2.modeler.examples.customtask.propertyTab6"
+           runtimeId="BpmnForCps.runtime1"
+           type="Task">
+        <property
+              name="type"
+              value="PhysicalTask">
+        </property>
+        <property
+              name="Implementation"
+              type="EString">
+        </property>
+        <property
+              name="OperationRef"
+              type="EString">
+        </property>
+        <property
+              name="dataInput"
+              type="EString">
+        </property>
+        <property
+              name="dataOutput"
+              type="EString">
+        </property>
+        <property
+              name="CPSDeviceRole"
+              type="EString">
+        </property>
+        <property
+              name="AffectMonitor"
+              type="EString">
+        </property>
+     </customTask>
+      <propertyTab
+            class="org.eclipse.bpmn2.modeler.core.merrimac.clad.DefaultPropertySection"
+            id="org.eclipse.bpmn2.modeler.examples.customtask.propertyTab6"
+            label="Physical Task"
+            runtimeId="BpmnForCps.runtime1"
+            type="org.eclipse.bpmn2.Task">
+      </propertyTab>
+     
+  <!--****************************Actuator's Task*********************************-->
+     <customTask
+            category="CPS Tasks"
+            description="this is an   Actuator’s Task"
+            featureContainer="bpmnforcpsextension.ActuatorTaskFeatureContainer"
+            icon="actuatortask.png"
+            id="org.eclipse.bpmn2.modeler.examples.customtask.customTask6"
+            name="Actuator’s Task"
+            propertyTabs="org.eclipse.bpmn2.modeler.examples.customtask.propertyTab7"
+            runtimeId="BpmnForCps.runtime1"
+            type="Task">
+         <property
+               name="type"
+               value="ActuatorTask">
+         </property>
+         <property
+               name="Implementation"
+               type="EString">
+         </property>
+         <property
+               name="OperationRef"
+               type="EString">
+         </property>
+         <property
+               name="dataInput"
+               type="EString">
+         </property>
+         <property
+               name="dataOutput"
+               type="EString">
+         </property>
+         <property
+               name="CPSDeviceRole"
+               type="EString">
+         </property>
+         <property
+               name="AffectMonitor"
+               type="EString">
+         </property>
+      </customTask>
+      <propertyTab
+            class="org.eclipse.bpmn2.modeler.core.merrimac.clad.DefaultPropertySection"
+            id="org.eclipse.bpmn2.modeler.examples.customtask.propertyTab7"
+            label="Actuator&apos;sTask"
+            runtimeId="BpmnForCps.runtime1"
+            type="org.eclipse.bpmn2.Task">
+      </propertyTab>
+      
+ <!--*****************************Sensor's Task*****************************-->
+     <customTask
+            category="CPS Tasks"
+            description="this is a Sensor’s Task"
+            featureContainer="bpmnforcpsextension.SensorTaskFeatureContainer"
+            icon="sensortask.png"
+            id="org.eclipse.bpmn2.modeler.examples.customtask.customTask7"
+            name="Sensor’s Task"
+            propertyTabs="org.eclipse.bpmn2.modeler.examples.customtask.propertyTab8"
+            runtimeId="BpmnForCps.runtime1"
+            type="Task">
+         <property
+               name="type"
+               value="SensorTask">
+         </property>
+         <property
+               name="Implementation"
+               type="EString">
+         </property>
+         <property
+               name="OperationRef"
+               type="EString">
+         </property>
+         <property
+               name="dataInput"
+               type="EString">
+         </property>
+         <property
+               name="dataOutput"
+               type="EString">
+         </property>
+         <property
+               name="CPSDeviceRole"
+               type="EString">
+         </property>
+         <property
+               name="AffectMonitor"
+               type="EString">
+         </property>
+      </customTask>
+      <propertyTab
+            class="org.eclipse.bpmn2.modeler.core.merrimac.clad.DefaultPropertySection"
+            id="org.eclipse.bpmn2.modeler.examples.customtask.propertyTab8"
+            label="Sensor&apos;s Task"
+            runtimeId="BpmnForCps.runtime1"
+            type="org.eclipse.bpmn2.Task">
+      </propertyTab>
+      
+<!--***************************Manual Task******************************-->
+   <customTask
+         category="CPS Tasks"
+         featureContainer="bpmnforcpsextension.ManualTaskFeatureContainer"
+         id="org.eclipse.bpmn2.modeler.examples.customtask.customTask11"
+         name="Manual Task"
+         propertyTabs="org.eclipse.bpmn2.modeler.examples.customtask.propertyTab9"
+         runtimeId="BpmnForCps.runtime1"
+         type="ManualTask">
+      <property
+            name="type"
+            value="ManualTask">
+      </property>
+      <property
+            name="Implementation"
+            type="EString">
+      </property>
+      </customTask>
+   <propertyTab
+         class="org.eclipse.bpmn2.modeler.core.merrimac.clad.DefaultPropertySection"
+         id="org.eclipse.bpmn2.modeler.examples.customtask.propertyTab9"
+         label="Manual Task"
+         runtimeId="BpmnForCps.runtime1"
+         type="org.eclipse.bpmn2.Task">
+     </propertyTab>
+ 
+<!--**************************************Physical Entity***********************-->  
+ <!--******************************Must Start At*************************-->
+    <customTask
+          category="CPS Events"
+          description="must start at "
+          featureContainer="bpmnforcpsextension.MustStartAtFeatureContainer"
+          icon="MSA.png"
+          id="org.eclipse.bpmn2.modeler.examples.customtask.customTask10"
+          name="Must Start At"
+          propertyTabs="org.eclipse.bpmn2.modeler.examples.customtask.propertyTab15"
+          runtimeId="BpmnForCps.runtime1"
+          type="MSA">
+       <property
+             name="name"
+             value="MSA">
+       </property>
+       <property
+             name="Type"
+             value="MSA">
+       </property>
+       <property
+             name="Target"
+             value="MustStartAt">
+       </property>
+       <property
+             name="value">
+       </property>
+    </customTask>
+      <propertyTab
+            class="default"
+            features="name Type Target value"
+            id="org.eclipse.bpmn2.modeler.examples.customtask.propertyTab15"
+            label="Must Start At"
+            runtimeId="BpmnForCps.runtime1">
+      </propertyTab>
+        <propertyExtension
+			id="org.eclipse.bpmn2.modeler.examples.propertyExtension.MyEventDefinition"
+			runtimeId="BpmnForCps.runtime1"
+			type="bpmnforcpsextension.MyModel.MSA"
+			class="bpmnforcpsextension.MustStartAtPropertyTab">
+		</propertyExtension>
+        <customTask
+              category="CPS Events"
+              description="Must Occur At"
+              featureContainer="bpmnforcpsextension.MustOccurAtFeatureContainer"
+              icon="MOA.png"
+              id="org.eclipse.bpmn2.modeler.examples.customtask.MOA"
+              name="Must Occur At"
+              propertyTabs="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabMOA"
+              runtimeId="BpmnForCps.runtime1"
+              type="MOA">
+           <property
+                 name="type"
+                 value="MOA">
+           </property>
+        </customTask>
+        <propertyTab
+              class="default"
+              features="name Type Target value"
+              id="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabMOA"
+              label="Must Occur At"
+              runtimeId="BpmnForCps.runtime1">
+        </propertyTab>
+        <propertyExtension
+              class="bpmnforcpsextension.MustOccurAtPropertyTab"
+              id="org.eclipse.bpmn2.modeler.examples.customtask.propertyExtensionMOA"
+              runtimeId="BpmnForCps.runtime1"
+              type="bpmnforcpsextension.MyModel.MOA">
+        </propertyExtension>
+<!--******************************Must Occur At*************************-->
+ <!--******************************Must Finish At*************************-->
+       <customTask
+             category="CPS Events"
+             description="must finish at "
+             featureContainer="bpmnforcpsextension.MustFinishAtFeatureContainer"
+             icon="MFA.png"
+             id="bpmnforcps.mfa"
+             name="Must Finish At"
+             propertyTabs="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabmfa"
+             runtimeId="BpmnForCps.runtime1"
+             type="MFA">
+          <property
+                name="type"
+                value="MustFinishAt">
+          </property>
+       </customTask>
+       <propertyTab
+             class="default"
+             features="name Type Target value"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabmfa"
+             label="Must Finish At"
+             runtimeId="BpmnForCps.runtime1">
+       </propertyTab>
+       <propertyExtension
+             class="bpmnforcpsextension.MustFinishAtPropertyTab"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyExtensionmfa"
+             runtimeId="BpmnForCps.runtime1"
+             type="bpmnforcpsextension.MyModel.MFA">
+       </propertyExtension> 
+       
+  <!--******************************Must Start In*************************-->
+     <customTask
+             category="CPS Events"
+             description="must start in "
+             featureContainer="bpmnforcpsextension.MustStartInFeatureContainer"
+             icon="MSI.png"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.msi"
+             name="Must Start In"
+             propertyTabs="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabmsi"
+             runtimeId="BpmnForCps.runtime1"
+             type="MSI">
+          <property
+                name="type"
+                value="MustStartIn">
+          </property>
+       </customTask>
+       <propertyTab
+             class="default"
+             features="name Type Target Min_Value Max_Value"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabmsi"
+             label="Must Start In"
+             runtimeId="BpmnForCps.runtime1">
+       </propertyTab>
+       <propertyExtension
+             class="bpmnforcpsextension.MustStartInPropertyTab"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyExtensionmsi"
+             runtimeId="BpmnForCps.runtime1"
+             type="bpmnforcpsextension.MyModel.MSI">
+       </propertyExtension>
+       
+  <!--******************************Must Occur In*************************-->
+     <customTask
+             category="CPS Events"
+             description="must occur in "
+             featureContainer="bpmnforcpsextension.MustOccurInFeatureContainer"
+             icon="MOI.png"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.moi"
+             name="Must Occur In"
+             propertyTabs="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabmoi"
+             runtimeId="BpmnForCps.runtime1"
+             type="MOI">
+          <property
+                name="type"
+                value="MustOccurIn">
+          </property>
+       </customTask>
+       <propertyTab
+             class="default"
+             features="name Type Target Min_Value Max_Value"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabmoi"
+             label="Must Occur In"
+             runtimeId="BpmnForCps.runtime1">
+       </propertyTab>
+       <propertyExtension
+             class="bpmnforcpsextension.MustOccurInPropertyTab"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyExtensionmoi"
+             runtimeId="BpmnForCps.runtime1"
+             type="bpmnforcpsextension.MyModel.MOI">
+       </propertyExtension>
+       
+  <!--******************************Must Finish In*************************-->
+     <customTask
+             category="CPS Events"
+             description="must finish in "
+             featureContainer="bpmnforcpsextension.MustFinishInFeatureContainer"
+             icon="MFI.png"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.mfi"
+             name="Must Finish In"
+             propertyTabs="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabmfi"
+             runtimeId="BpmnForCps.runtime1"
+             type="MFI">
+          <property
+                name="type"
+                value="MustFinishIn">
+          </property>
+       </customTask>
+       <propertyTab
+             class="default"
+             features="name Type Target Min_Value Max_Value"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabmfi"
+             label="Must Finish In"
+             runtimeId="BpmnForCps.runtime1">
+       </propertyTab>
+       <propertyExtension
+             class="bpmnforcpsextension.MustFinishInPropertyTab"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyExtensionmfi"
+             runtimeId="BpmnForCps.runtime1"
+             type="bpmnforcpsextension.MyModel.MFI">
+       </propertyExtension>
+       
+ <!--******************************Must Happen At An Infinite Time*************************-->
+     <customTask
+             category="CPS Events"
+             description="Must Happen At An Infinite Time "
+             featureContainer="bpmnforcpsextension.MustHappenAtAnInfiniteTimeFeatureContainer"
+             icon="MHIT.png"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.MHIT"
+             name="Must Happen At An Infinite Time"
+             propertyTabs="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabMHIT"
+             runtimeId="BpmnForCps.runtime1"
+             type="MHIT">
+          <property
+                name="type"
+                value="MustHappenAtAnInfiniteTime">
+          </property>
+       </customTask>
+       <propertyTab
+             class="default"
+             features="name Type Target Do_Happen Min_bound_time Max_bound_time First_physical_property Min_value_of_the_first_physical_property Max_value_of_the_first_physical_property Second_physical_property Min_value_of_the_second_physical_property Max_value_of_the_second_physical_property Third_physical_property Min_value_of_the_third_physical_property Max_value_of_the_third_physical_property Physical_dependency_function"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabMHIT"
+             label="Must Happen At An Infinite Time"
+             runtimeId="BpmnForCps.runtime1">
+       </propertyTab>
+       <propertyExtension
+             class="bpmnforcpsextension.MustHappenAtAnInfiniteTimePropertyTab"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyExtensionMHIT"
+             runtimeId="BpmnForCps.runtime1"
+             type="bpmnforcpsextension.MyModel.MustHappenAtAnInfiniteTime">
+       </propertyExtension>
+       
+ <!--******************************Must Happen As Long As The Activity is Executing*************************-->
+     <customTask
+             category="CPS Events"
+             description="Must Happen As Long As The Activity is Executing "
+             featureContainer="bpmnforcpsextension.MustHappenAsLongAsTheActivityIsExecutingFeatureContainer"
+             icon="MHDA.png"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.MHALATAIE"
+             name="Must Happen As Long As The Activity Is Executing"
+             propertyTabs="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabMHALATAIE"
+             runtimeId="BpmnForCps.runtime1"
+             type="MHALATAIE">
+          <property
+                name="type"
+                value="MustHappenAsLongAsTheActivityIsExecuting">
+          </property>
+       </customTask>
+       <propertyTab
+             class="default"
+             features="name Type Target Do_Happen Min_bound_time Max_bound_time First_physical_property Min_value_of_the_first_physical_property Max_value_of_the_first_physical_property Second_physical_property Min_value_of_the_second_physical_property Max_value_of_the_second_physical_property Third_physical_property Min_value_of_the_third_physical_property Max_value_of_the_third_physical_property Physical_dependency_function"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabMHALATAIE"
+             label="Must Happen As Long As The Activity is Executing"
+             runtimeId="BpmnForCps.runtime1">
+       </propertyTab>
+       <propertyExtension
+             class="bpmnforcpsextension.MustHappenAsLongAsTheActivityIsExecutingPropertyTab"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyExtensionMHALATAIE"
+             runtimeId="BpmnForCps.runtime1"
+             type="bpmnforcpsextension.MyModel.MustHappenAsLongAsTheActivityIsExecuting">
+       </propertyExtension>
+ <!--******************************Must Happen  At the Start of An Activity*************************-->
+     <customTask
+             category="CPS Events"
+             description="Must Happen  At the Start of An Activity"
+             featureContainer="bpmnforcpsextension.MustHappenAtTheStartOfTheActivityFeatureContainer"
+             icon="MHST.png"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.MHST"
+             name="Must Happen  At the Start of The Activity"
+             propertyTabs="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabMHST"
+             runtimeId="BpmnForCps.runtime1"
+             type="MHST">
+          <property
+                name="type"
+                value="MustHappenAtTheStartOfTheActivity">
+          </property>
+       </customTask>
+       <propertyTab
+             class="default"
+             features="name Type Target Do_Happen Min_bound_time Max_bound_time First_physical_property Min_value_of_the_first_physical_property Max_value_of_the_first_physical_property Second_physical_property Min_value_of_the_second_physical_property Max_value_of_the_second_physical_property Third_physical_property Min_value_of_the_third_physical_property Max_value_of_the_third_physical_property Physical_dependency_function"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabMHST"
+             label="Must Happen  At the Start Of The Activity"
+             runtimeId="BpmnForCps.runtime1">
+       </propertyTab>
+       <propertyExtension
+             class="bpmnforcpsextension.MustHappenAtTheStartOfTheActivityPropertyTab"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyExtensionMHST"
+             runtimeId="BpmnForCps.runtime1"
+             type="bpmnforcpsextension.MyModel.MustHappenAtTheStartOfTheActivity">
+       </propertyExtension>
+       <!--******************************Must Happen  At the End of An Activity*************************-->
+     <customTask
+             category="CPS Events"
+             description="Must Happen  At the End of An Activity"
+             featureContainer="bpmnforcpsextension.MustHappenAtTheEndOfTheActivityFeatureContainer"
+             icon="MHFT.png"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.MHFT"
+             name="Must Happen  At the End of The Activity"
+             propertyTabs="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabMHFT"
+             runtimeId="BpmnForCps.runtime1"
+             type="MHFT">
+          <property
+                name="type"
+                value="MustHappenAtTheEndOfTheActivity">
+          </property>
+       </customTask>
+       <propertyTab
+             class="default"
+             features="name Type Target Do_Happen Min_bound_time Max_bound_time First_physical_property Min_value_of_the_first_physical_property Max_value_of_the_first_physical_property Second_physical_property Min_value_of_the_second_physical_property Max_value_of_the_second_physical_property Third_physical_property Min_value_of_the_third_physical_property Max_value_of_the_third_physical_property Physical_dependency_function"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabMHFT"
+             label="Must Happen  At the End of The Activity"
+             runtimeId="BpmnForCps.runtime1">
+       </propertyTab>
+       <propertyExtension
+             class="bpmnforcpsextension.MustHappenAtTheEndOfTheActivityPropertyTab"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyExtensionMHFT"
+             runtimeId="BpmnForCps.runtime1"
+             type="bpmnforcpsextension.MyModel.MustHappenAtTheEndOfTheActivity">
+       </propertyExtension>      
+  <!--******************************Must Happen At A Bound Time*************************-->
+     <customTask
+             category="CPS Events"
+             description="Must Happen At A Bound Time "
+             featureContainer="bpmnforcpsextension.MustHappenAtABoundTimeFeatureContainer"
+             icon="MHBT.png"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.MHBT"
+             name="Must Happen At A Bound Time"
+             propertyTabs="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabMHBT"
+             runtimeId="BpmnForCps.runtime1"
+             type="MHBT">
+          <property
+                name="type"
+                value="MustHappenAtABoundTime">
+          </property>
+       </customTask>
+       <propertyTab
+             class="default"
+             features="name Type Target Do_Happen Min_bound_time Max_bound_time First_physical_property Min_value_of_the_first_physical_property Max_value_of_the_first_physical_property Second_physical_property Min_value_of_the_second_physical_property Max_value_of_the_second_physical_property Third_physical_property Min_value_of_the_third_physical_property Max_value_of_the_third_physical_property Physical_dependency_function"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabMHBT"
+             label="Must Happen At A Bound Time"
+             runtimeId="BpmnForCps.runtime1">
+       </propertyTab>
+       <propertyExtension
+             class="bpmnforcpsextension.MustHappenAtABoundTimePropertyTab"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyExtensionMHBT"
+             runtimeId="BpmnForCps.runtime1"
+             type="bpmnforcpsextension.MyModel.MustHappenAtABoundTime">
+       </propertyExtension>
+   <!--******************************Must Last For A Duration*************************-->
+   <!--  <customTask
+             category="CPS Events"
+             description="Must Last For A Duration "
+             featureContainer="org.eclipse.bpmn2.modeler.examples.customtask.MustLastForADurationFeatureContainer"
+             icon="DurPP.png"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.DurPP"
+             name="Must Last For A Duration"
+             propertyTabs="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabDurPP"
+             runtimeId="org.eclipse.bpmn2.modeler.examples.customtask.runtime1"
+             type="DurPP">
+          <property
+                name="type"
+                value="MustLastForADuration">
+          </property>
+       </customTask>
+       <propertyTab
+             class="default"
+             features="name Type Target Do_Happen Max_Duration_Time Min_Duration_Time PropPhysical"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabDurPP"
+             label="Must Last For A Duration"
+             runtimeId="org.eclipse.bpmn2.modeler.examples.customtask.runtime1">
+       </propertyTab>
+       <propertyExtension
+             class="org.eclipse.bpmn2.modeler.examples.customtask.MustLastForADurationPropertyTab"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyExtensionDurPP"
+             runtimeId="org.eclipse.bpmn2.modeler.examples.customtask.runtime1"
+             type="org.eclipse.bpmn2.modeler.examples.customtask.MyModel.MustLastForADuration">
+       </propertyExtension>-->
+  <!--******************************Must Never Happen At An Infinite Time*************************-->
+     <customTask
+             category="CPS Events"
+             description="Must Never Happen At An Infinite Time "
+             featureContainer="bpmnforcpsextension.MustNeverHappenAtAnInfiniteTimeFeatureContainer"
+             icon="MNHIT.png"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.MNHIT"
+             name="Must Never Happen At An Infinite Time"
+             propertyTabs="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabMNHIT"
+             runtimeId="BpmnForCps.runtime1"
+             type="MNHIT">
+          <property
+                name="type"
+                value="MustNeverHappenAtAnInfiniteTime">
+          </property>
+       </customTask>
+       <propertyTab
+             class="default"
+             features="name Type Target Do_Happen Min_bound_time Max_bound_time First_physical_property Min_value_of_the_first_physical_property Max_value_of_the_first_physical_property Second_physical_property Min_value_of_the_second_physical_property Max_value_of_the_second_physical_property Third_physical_property Min_value_of_the_third_physical_property Max_value_of_the_third_physical_property Physical_dependency_function"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabMNHIT"
+             label="Must Never Happen At An Infinite Time"
+             runtimeId="BpmnForCps.runtime1">
+       </propertyTab>
+       <propertyExtension
+             class="bpmnforcpsextension.MustNeverHappenAtAnInfiniteTimePropertyTab"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyExtensionMNHIT"
+             runtimeId="BpmnForCps.runtime1"
+             type="bpmnforcpsextension.MyModel.MustNeverHappenAtAnInfiniteTime">
+       </propertyExtension>  
+       
+  <!--******************************Must Never Happen As Long As The Activity is Executing*************************-->
+    <customTask
+             category="CPS Events"
+             description="Must Never Happen As Long As The Activity is Executing "
+             featureContainer="bpmnforcpsextension.MustNeverHappenAsLongAsTheActivityIsExecutingFeatureContainer"
+             icon="MNHDA.png"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.MNHALATAIE"
+             name="Must Never Happen As Long As The Activity Is Executing"
+             propertyTabs="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabMNHALATAIE"
+             runtimeId="BpmnForCps.runtime1"
+             type="MNHALATAIE">
+          <property
+                name="type"
+                value="MustNeverHappenAsLongAsTheActivityIsExecuting">
+          </property>
+       </customTask>
+       <propertyTab
+             class="default"
+             features="name Type Target Do_Happen Min_bound_time Max_bound_time First_physical_property Min_value_of_the_first_physical_property Max_value_of_the_first_physical_property Second_physical_property Min_value_of_the_second_physical_property Max_value_of_the_second_physical_property Third_physical_property Min_value_of_the_third_physical_property Max_value_of_the_third_physical_property Physical_dependency_function"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabMNHALATAIE"
+             label="Must Never Happen As Long As The Activity is Executing"
+             runtimeId="BpmnForCps.runtime1">
+       </propertyTab>
+       <propertyExtension
+             class="bpmnforcpsextension.MustNeverHappenAsLongAsTheActivityIsExecutingPropertyTab"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyExtensionMNHALATAIE"
+             runtimeId="BpmnForCps.runtime1"
+             type="bpmnforcpsextension.MyModel.MustNeverHappenAsLongAsTheActivityIsExecuting">
+       </propertyExtension>  
+ 
+<!--******************************Must Never Happen  At the Start of An Activity*************************-->
+     <customTask
+             category="CPS Events"
+             description="Must Never Happen  At the Start of An Activity"
+             featureContainer="bpmnforcpsextension.MustNeverHappenAtTheStartOfTheActivityFeatureContainer"
+             icon="MNHST.png"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.MNHST"
+             name="Must Never Happen  At the Start of The Activity"
+             propertyTabs="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabMNHST"
+             runtimeId="BpmnForCps.runtime1"
+             type="MNHST">
+          <property
+                name="type"
+                value="MustNeverHappenAtTheStartOfTheActivity">
+          </property>
+       </customTask>
+       <propertyTab
+             class="default"
+             features="name Type Target Do_Happen Min_bound_time Max_bound_time First_physical_property Min_value_of_the_first_physical_property Max_value_of_the_first_physical_property Second_physical_property Min_value_of_the_second_physical_property Max_value_of_the_second_physical_property Third_physical_property Min_value_of_the_third_physical_property Max_value_of_the_third_physical_property Physical_dependency_function"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabMNHST"
+             label="Must Never  Happen  At the Start of The Activity"
+             runtimeId="BpmnForCps.runtime1">
+       </propertyTab>
+       <propertyExtension
+             class="bpmnforcpsextension.MustNeverHappenAtTheStartOfTheActivityPropertyTab"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyExtensionMNHST"
+             runtimeId="BpmnForCps.runtime1"
+             type="bpmnforcpsextension.MyModel.MustNeverHappenAtTheStartOfTheActivity">
+       </propertyExtension>
+
+ <!--******************************Must Never Happen  At the End of An Activity*************************-->
+     <customTask
+             category="CPS Events"
+             description="Must Never Happen  At the End of An Activity"
+             featureContainer="bpmnforcpsextension.MustNeverHappenAtTheEndOfTheActivityFeatureContainer"
+             icon="MNHFT.png"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.MNHFT"
+             name="Must Never Happen  At the End of The Activity"
+             propertyTabs="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabMNHFT"
+             runtimeId="BpmnForCps.runtime1"
+             type="MNHFT">
+          <property
+                name="type"
+                value="MustNeverHappenAtTheEndOfTheActivity">
+          </property>
+       </customTask>
+       <propertyTab
+             class="default"
+             features="name Type Target Do_Happen Min_bound_time Max_bound_time First_physical_property Min_value_of_the_first_physical_property Max_value_of_the_first_physical_property Second_physical_property Min_value_of_the_second_physical_property Max_value_of_the_second_physical_property Third_physical_property Min_value_of_the_third_physical_property Max_value_of_the_third_physical_property Physical_dependency_function"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabMNHFT"
+             label="Must Never Happen  At the End of The Activity"
+             runtimeId="BpmnForCps.runtime1">
+       </propertyTab>
+       <propertyExtension
+             class="bpmnforcpsextension.MustNeverHappenAtTheEndOfTheActivityPropertyTab"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyExtensionMNHFT"
+             runtimeId="BpmnForCps.runtime1"
+             type="bpmnforcpsextension.MyModel.MustNeverHappenAtTheEndOfTheActivity">
+       </propertyExtension>
+<!--******************************Must Never Happen At A Bound Time*************************-->
+     <customTask
+             category="CPS Events"
+             description="Must Never Happen At A Bound Time "
+             featureContainer="bpmnforcpsextension.MustNeverHappenAtABoundTimeFeatureContainer"
+             icon="MNHBT.png"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.MNHBT"
+             name="Must Never Happen At A Bound Time"
+             propertyTabs="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabMNHBT"
+             runtimeId="BpmnForCps.runtime1"
+             type="MNHBT">
+          <property
+                name="type"
+                value="MustNeverHappenAtABoundTime">
+          </property>
+       </customTask>
+       <propertyTab
+             class="default"
+             features="name Type Target Do_Happen Min_bound_time Max_bound_time First_physical_property Min_value_of_the_first_physical_property Max_value_of_the_first_physical_property Second_physical_property Min_value_of_the_second_physical_property Max_value_of_the_second_physical_property Third_physical_property Min_value_of_the_third_physical_property Max_value_of_the_third_physical_property Physical_dependency_function"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabMNHBT"
+             label="Must Never Happen At A Bound Time"
+             runtimeId="BpmnForCps.runtime1">
+       </propertyTab>
+       <propertyExtension
+             class="bpmnforcpsextension.MustNeverHappenAtABoundTimePropertyTab"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyExtensionMNHBT"
+             runtimeId="BpmnForCps.runtime1"
+             type="bpmnforcpsextension.MyModel.MustNeverHappenAtABoundTime">
+       </propertyExtension>
+   <!--******************************Must Never Happing During*************************-->
+     <!--<customTask
+             category="CPS Events"
+             description="Must Never Happen During"
+             featureContainer="org.eclipse.bpmn2.modeler.examples.customtask.MustNeverHappenDuringFeatureContainer"
+             icon="NDurPP.png"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.NDurPP"
+             name="Must Never Happen During"
+             propertyTabs="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabNDurPP"
+             runtimeId="org.eclipse.bpmn2.modeler.examples.customtask.runtime1"
+             type="NDurPP">
+          <property
+                name="type"
+                value="MustNeverHappenDuring">
+          </property>
+       </customTask>
+       <propertyTab
+             class="default"
+             features="name Type Target Do_Happen Max_Duration_Time Min_Duration_Time PropPhysical"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabNDurPP"
+             label="Must Never Happen During"
+             runtimeId="org.eclipse.bpmn2.modeler.examples.customtask.runtime1">
+       </propertyTab>
+       <propertyExtension
+             class="org.eclipse.bpmn2.modeler.examples.customtask.MustNeverHappenDuringPropertyTab"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyExtensionNDurPP"
+             runtimeId="org.eclipse.bpmn2.modeler.examples.customtask.runtime1"
+             type="org.eclipse.bpmn2.modeler.examples.customtask.MyModel.MustNeverHappenDuring">
+       </propertyExtension>-->
+  
+<!--******************************Duration*************************-->    
+       <customTask
+             category="CPS Events"
+             description="Duration"
+             featureContainer="bpmnforcpsextension.DurationFeatureContainer"
+             icon="duration.png"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.duration"
+             name="Duration"
+             propertyTabs="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabduration"
+             runtimeId="BpmnForCps.runtime1"
+             type="Duration">
+          <property
+                name="name"
+                value="Duration">
+          </property>
+          <property
+                name="target"
+                value="Duration">
+          </property>
+          <property
+                name="Min_time_duration"
+                value="Duration">
+          </property>
+          <property
+                name="Max_time_duration"
+                value="Duration">
+          </property>
+          <property
+                name="Time_Type"
+                value="Duration">
+          </property>
+       </customTask>
+       <propertyTab
+             class="default"
+            features="name target Min_time_duration Max_time_duration Time_Type"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyTabduration"
+              label="Duration"
+             runtimeId="BpmnForCps.runtime1">
+       </propertyTab>
+       <propertyExtension
+             class="bpmnforcpsextension.DurationPropertySection"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.propertyExtensionduration"
+             runtimeId="BpmnForCps.runtime1"
+             type="bpmnforcpsextension.MyModel.Duration">
+       </propertyExtension>
+       
+ <!--*************************temporal dependency**************************-->
+       <customTask
+             category="CPS Events"
+             description="Temporal Dependency"
+             featureContainer="bpmnforcpsextension.CustomTemporalDependencyFeatureContainer"
+             icon="TemporelDepend.png"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.tempdepend"
+             name="Temporal dependency "
+             runtimeId="BpmnForCps.runtime1"
+             type="TemporalDependency">
+       </customTask>
+       <propertyTab
+             class="default"
+             features="name Min_value Max_value sourceRef targetRef"
+             id="org.eclipse.bpmn2.modeler.examples.customtask.tempdepend"
+             label="Temporal Dependency"
+             runtimeId="BpmnForCps.runtime1"
+             type="bpmnforcpsextension.MyModel.TemporalDependency">
+       </propertyTab>
+ <!-- *****************************text annotation rwe properties ******************* -->
+
+  <customTask
+        category="RWE Properties"
+        description="This task attempts to present the Real World Environnement properties."
+        featureContainer="bpmnforcpsextension.TextAnnotationPlusFeatureContainer"
+        icon="plus.png"
+        id="org.eclipse.bpmn2.modeler.examples.customtask.rweproperties"
+        name="RWE properties"
+        propertyTabs="org.eclipse.bpmn2.modeler.examples.customtask.rwepropertiestab"
+        runtimeId="BpmnForCps.runtime1"
+        type="TextAnnotation">
+			<!--<property name="name" value="Mitigation Task" type="EString"/>-->
+			<property name="RWEproperties" value="real world environnemnt properties" type="EString"/>
+			<!--<property name="evaluate" value="true" type="EBoolean" description="Include this activity in Risk Calculations"/>
+			<property name="benefit" value="0" type="EInt" description="Potential benefit provided by this Mitigation activity"/>-->
+		</customTask>
+		<propertyTab
+        class="bpmnforcpsextension.TextAnnotationPlusPropertyTab"
+        features="org.eclipse.bpmn2.modeler.textAnnotation.tab"
+        id="org.eclipse.bpmn2.modeler.examples.customtask.rwepropertiestab"
+        label="RWE Properties"
+        runtimeId="BpmnForCps.runtime1"
+        type="org.eclipse.bpmn2.TextAnnotation">
+		</propertyTab>
+<!-- ****************************** color extension *********************** -->
+	    <dataType name="EColor" class="bpmnforcpsextension.EColorConversionDelegate"/>
+		<dataType name="EFont" class="bpmnforcpsextension.EFontConversionDelegate"/>
+
+		<modelExtension
+			id="org.eclipse.bpmn2.modeler.runtime.none.modelExtension.appearance.BaseElement"
+			uri="http://org.eclipse.bpmn2/ext"
+			name="BaseElement Appearance"
+			type="BaseElement"
+			decorator="org.eclipse.bpmn2.modeler.ui.DefaultObjectDecorator">
+			<property name="style" type="ShapeStyle" label="%appearance">
+				<value>
+					<property name="shapeForeground" type="EColor" label="border.color" />
+					<property name="shapeBackground" type="EColor" label="fill.color" />
+					<property name="labelForeground" type="EColor" label="label.color" />
+					<property name="labelFont" type="EFont" label="label.font" />
+					<property name="labelPosition" type="LabelPosition:EEnum" value="%label.position.values" label="label.position" />
+					<property name="routingStyle" type="RoutingStyle:EEnum" value="%routing.style.values" label="routing.style" />
+				</value>
+			</property>
+		</modelExtension>
+
+<!-- ************************************ model extension***********************-->
+    
+ <!-- ****************************************** physical entity *************-->
+  <customTask
+        category="CPS Tasks"
+        description="this customtask presents a physical entity"
+        featureContainer="bpmnforcpsextension.PhysicalE"
+        id="org.eclipse.bpmn2.modeler.examples.customtask.physentit"
+        name="Physical entity "
+        propertyTabs="org.eclipse.bpmn2.modeler.examples.customtask.pe"
+        runtimeId="BpmnForCps.runtime1"
+        type="Task">
+     <property
+           name="type"
+           value="PhysicalEntity">
+     </property>
+    <property
+           name="CPSPerformerRef"
+           type="EString">
+     </property>
+     <property
+           name="CPSDeviceRoleParameters"
+           type="EString">
+     </property>
+     <property
+           name="TypeDevice"
+           type="EString">
+     </property>
+     <!--<property
+           name="isMovable"
+           type="EBoolean">
+     </property>-->
+  </customTask>
+  <propertyTab
+        class="org.eclipse.bpmn2.modeler.core.merrimac.clad.DefaultPropertySection"
+        id="org.eclipse.bpmn2.modeler.examples.customtask.pe"
+        label="physical entity"
+        runtimeId="BpmnForCps.runtime1">
+  </propertyTab>
+ <!-- ******************** PeriodicActivityTimer *********************************-->
+  <customTask
+        category="CPS Events"
+        featureContainer="bpmnforcpsextension.PeriodicActivityTimerFeatureContainer"
+        icon="timer.png"
+        id="BpmnForCpsExtension.customTaskeventdef"
+        name="PeriodicActivityTimer"
+        propertyTabs="BpmnForCpsExtension.periodicactivitypropertytab"
+        runtimeId="BpmnForCps.runtime1"
+        type="PeriodicEvent">
+     <property
+           name="type"
+           value="periodicevent">
+     </property>
+  </customTask>
+  <propertyTab
+        class="default"
+        features="name target value "
+        id="BpmnForCpsExtension.periodicactivitypropertytab"
+        label="Periodic Activity Timer"
+        runtimeId="BpmnForCps.runtime1">  
+   </propertyTab>
+
+  <propertyExtension
+        class="bpmnforcpsextension.PeriodicActivityTimerPropertySection"
+        id="BpmnForCpsExtension.periodicactivitypropertyExtension1"
+        runtimeId="BpmnForCps.runtime1"
+        type="bpmnforcpsextension.MyModel.PeriodicActivity">
+  </propertyExtension>  
+ <!-- ******************** SporadicActivityTimer *********************************-->
+  <customTask
+        category="CPS Events"
+        featureContainer="bpmnforcpsextension.SporadicEventFeatureContainer"
+        icon="timer.png"
+        id="BpmnForCpsExtension.customTaskSporadicevent"
+        name="SporadicActivityTimer"
+        propertyTabs="BpmnForCpsExtension.SporadicEventypropertytab"
+        runtimeId="BpmnForCps.runtime1"
+        type="SporadicEvent">
+     <property
+           name="type"
+           value="sporadicevent">
+     </property>
+  </customTask>
+  <propertyTab
+        class="default"
+        features="name target Min_time Max_time "
+        id="BpmnForCpsExtension.SporadicEventypropertytab"
+        label="Sporadic Activity Timer"
+        runtimeId="BpmnForCps.runtime1">  
+   </propertyTab>
+
+  <propertyExtension
+        class="bpmnforcpsextension.SporadicEventPropertySection"
+        id="BpmnForCpsExtension.SporadicEventypropertytabactivitypropertyExtension1"
+        runtimeId="BpmnForCps.runtime1"
+        type="bpmnforcpsextension.MyModel.SporadicEvent">
+  </propertyExtension> 
+  </extension>
+<!-- ************************************************* bouton verif ******************************************************* -->
+<extension point="org.eclipse.ui.actionSets">
+	<actionSet
+		id="org.eclipse.ui.articles.action.contribution.set"
+		label="Check the model"
+		visible="true">
+		<action
+			id="org.eclipse.ui.articles.action.contribution.set.action1" 
+			label="" 
+			icon="icons/small/validate.gif"
+			tooltip="Check the model" 
+			toolbarPath="Normal/additions"
+			class="bpmnforcpsextension.SetAction1Delegate"> 
+		</action> 
+	</actionSet>
+</extension>
+</plugin>
